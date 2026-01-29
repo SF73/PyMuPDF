@@ -20,7 +20,7 @@ jobs:
         args: [
             # '',
             '-m "git:--branch master https://github.com/ArtifexSoftware/mupdf"', 
-            '-m "git:--branch 1.26.x https://github.com/ArtifexSoftware/mupdf"',
+            # '-m "git:--branch 1.26.x https://github.com/ArtifexSoftware/mupdf"',
             ]
       fail-fast: false
     
@@ -36,6 +36,6 @@ jobs:
       
       # We do not use upload-artifact@v4 because it fails due to us creating
       # identically-named wheels.
-      #- uses: actions/upload-artifact@v4
-      #  with:
-      #    path: ./wheelhouse/*.whl
+      - uses: actions/upload-artifact@v4
+       with:
+         path: ./wheelhouse/*.whl
