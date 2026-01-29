@@ -37,5 +37,5 @@ jobs:
       # We do not use upload-artifact@v4 because it fails due to us creating
       # identically-named wheels.
       - uses: actions/upload-artifact@v4
-       with:
-         path: ./wheelhouse/*.whl
+        with:
+          path: ./wheelhouse/*.whl
